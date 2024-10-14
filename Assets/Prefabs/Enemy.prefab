@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -136605102550897295}
   - component: {fileID: -7748038979832298635}
   - component: {fileID: -3043136310264756888}
+  - component: {fileID: 7949056182181145187}
+  - component: {fileID: -6374657271024229483}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -149,6 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7ca985c5178304a859becd61b5cc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  scorePoint: 100
+  explosionPrefab: {fileID: 8507662937075072842, guid: 726a1b43aeb042746b7d9fa6a3dca9ac, type: 3}
+  itemPrefab:
+  - {fileID: 4304320994049996200, guid: f4eb8b7d5c7aabb448a7a27b658dea1e, type: 3}
+  - {fileID: 7624217391899155741, guid: 25d78f8f9cfc5b7408563051c82e1a0b, type: 3}
+  - {fileID: 5458482533418600802, guid: 2171e740b67f40b4dadd63dcd5d4fb2b, type: 3}
 --- !u!114 &-3043136310264756888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +171,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 7dabe38acd56f524c8acd50f31d5b73e, type: 2}
+--- !u!95 &7949056182181145187
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747392527102065414}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1f11af76e7ecc6429277a82f61a4844, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6374657271024229483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747392527102065414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7513ed6a4d6eb1a4e9d1d7f834211dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 4
