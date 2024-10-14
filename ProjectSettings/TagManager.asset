@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Meteorite
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

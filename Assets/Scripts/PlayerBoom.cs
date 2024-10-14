@@ -53,6 +53,12 @@ public class PlayerBoom : MonoBehaviour
             meteorites[i].GetComponent<Meteorite>().OnDie();
         }
 
+        GameObject[] projectiles = GameObject.FindGameObjectsWithTag("EnemyProjectile");
+        for(int i=0; i<projectiles.Length; i++)
+        {
+            projectiles[i].GetComponent<EnemtProjectile>().OnDie();
+        }
+
         Destroy(gameObject); 
     }
 }
