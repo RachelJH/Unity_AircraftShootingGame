@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject textBossWarning;
     [SerializeField]
+    private GameObject panelBossHP;
+    [SerializeField]
     private GameObject boss;
     [SerializeField]
     private float spawnTime;
@@ -25,6 +27,8 @@ public class EnemySpawner : MonoBehaviour
     {
         textBossWarning.SetActive(false);
         
+        panelBossHP.SetActive(false);
+
         boss.SetActive(false);
 
         StartCoroutine("SpawnEnemy");
@@ -60,6 +64,7 @@ public class EnemySpawner : MonoBehaviour
         textBossWarning.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         textBossWarning.SetActive(false);
+        panelBossHP.SetActive(true);
         boss.SetActive(true);
 
         boss.GetComponent<Boss>().ChangeState(BossState.MoveToAppearPoint);

@@ -7,6 +7,8 @@ public class PlayerBoom : MonoBehaviour
     [SerializeField]
     private AnimationCurve curve;
 
+    [SerializeField]
+    private int damage = 100;
     private float boomDelay = 0.5f;
     private Animator animator;
 
@@ -57,6 +59,12 @@ public class PlayerBoom : MonoBehaviour
         for(int i=0; i<projectiles.Length; i++)
         {
             projectiles[i].GetComponent<EnemtProjectile>().OnDie();
+        }
+
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+        if( boss != null)
+        {
+            boss.GetComponent<BossHP>().TakeDamage(damage);
         }
 
         Destroy(gameObject); 
